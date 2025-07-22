@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://p6f2eywb7fxq"]
 
-[ext_resource type="Script" uid="uid://ddhntuss4tfcr" path="res://Scenes/TitleScreen/title_screen.gd" id="1_4lqrc"]
+[ext_resource type="Script" path="res://Scenes/TitleScreen/title_screen.gd" id="1_4lqrc"]
 [ext_resource type="Texture2D" uid="uid://bcddwwj3gs74j" path="res://icon.svg" id="1_f6ya5"]
 [ext_resource type="Texture2D" uid="uid://cr8sr4d6nucfb" path="res://Scenes/TitleScreen/background sky.png" id="2_at0r8"]
 [ext_resource type="Texture2D" uid="uid://cg47m7jo7r382" path="res://Scenes/TitleScreen/cloud1.png" id="4_q82or"]
@@ -87,7 +87,6 @@ position = Vector2(591, 409)
 texture = ExtResource("6_wgw8k")
 
 [node name="Control" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_top = 1.0

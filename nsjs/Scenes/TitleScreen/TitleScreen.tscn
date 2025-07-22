@@ -75,18 +75,19 @@ repeat_size = Vector2(400, 0)
 autoscroll = Vector2(60, 0)
 
 [node name="Cloud1" type="Sprite2D" parent="Parallax2D"]
-position = Vector2(677, 409)
+position = Vector2(709, 412)
 texture = ExtResource("4_q82or")
 
 [node name="Cloud2" type="Sprite2D" parent="Parallax2D"]
-position = Vector2(457, 408)
+position = Vector2(444, 408)
 texture = ExtResource("5_2lib6")
 
 [node name="Cloud3" type="Sprite2D" parent="Parallax2D"]
-position = Vector2(564, 410)
+position = Vector2(591, 409)
 texture = ExtResource("6_wgw8k")
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_top = 1.0
@@ -133,6 +134,7 @@ libraries = {
 }
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer"]
+visible = false
 modulate = Color(0, 0, 0, 1)
 position = Vector2(590, 359)
 scale = Vector2(11.1719, 6.29688)

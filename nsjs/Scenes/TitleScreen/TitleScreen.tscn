@@ -1,7 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://p6f2eywb7fxq"]
+[gd_scene load_steps=11 format=3 uid="uid://p6f2eywb7fxq"]
 
 [ext_resource type="Script" uid="uid://ddhntuss4tfcr" path="res://Scenes/TitleScreen/title_screen.gd" id="1_4lqrc"]
 [ext_resource type="Texture2D" uid="uid://bcddwwj3gs74j" path="res://icon.svg" id="1_f6ya5"]
+[ext_resource type="Texture2D" uid="uid://cr8sr4d6nucfb" path="res://Scenes/TitleScreen/background sky.png" id="2_at0r8"]
+[ext_resource type="Texture2D" uid="uid://cg47m7jo7r382" path="res://Scenes/TitleScreen/cloud1.png" id="4_q82or"]
+[ext_resource type="Texture2D" uid="uid://c8l0w2yphd2gl" path="res://Scenes/TitleScreen/cloud2.png" id="5_2lib6"]
+[ext_resource type="Texture2D" uid="uid://caswuoyeca58p" path="res://Scenes/TitleScreen/cloud3.png" id="6_wgw8k"]
 
 [sub_resource type="Animation" id="Animation_4lqrc"]
 resource_name = "Fade In"
@@ -58,6 +62,30 @@ _data = {
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource("1_4lqrc")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 325)
+zoom = Vector2(3, 2.5)
+
+[node name="BackgroundSky" type="Sprite2D" parent="."]
+position = Vector2(579, 330)
+texture = ExtResource("2_at0r8")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(400, 0)
+autoscroll = Vector2(60, 0)
+
+[node name="Cloud1" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(677, 409)
+texture = ExtResource("4_q82or")
+
+[node name="Cloud2" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(457, 408)
+texture = ExtResource("5_2lib6")
+
+[node name="Cloud3" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(564, 410)
+texture = ExtResource("6_wgw8k")
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -106,7 +134,7 @@ libraries = {
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimationPlayer"]
 modulate = Color(0, 0, 0, 1)
-position = Vector2(588, 338)
+position = Vector2(590, 359)
 scale = Vector2(11.1719, 6.29688)
 texture = ExtResource("1_f6ya5")
 

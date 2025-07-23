@@ -7,6 +7,7 @@ extends CharacterBody2D
 const SPEED := 300.0
 var direction := 1
 var player_found := false
+
 func _physics_process(delta: float) -> void:
 	if player_found:
 		chase()
@@ -36,7 +37,14 @@ func patrol():
 	velocity.x = direction * SPEED
 	
 func chase():
-	pass
+	
+	if Utility.player_pos.x > position.x:
+		direction = 1
+	elif Utility.player_pos.x < position.x:
+		direction = -1
+		
+	velocity.x = direction * SPEED * 1.1
+	
 	#the plan for this function is to uses an autoload to find the players position
 	#and have the enemy run at them
 	

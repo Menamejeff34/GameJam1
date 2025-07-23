@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cb2m5ea70g1sg"]
+[gd_scene load_steps=6 format=3 uid="uid://cb2m5ea70g1sg"]
 
 [ext_resource type="PackedScene" uid="uid://b5fouvn82sc3f" path="res://Scenes/Enemies/enemy_1_test.tscn" id="1_8lsky"]
 [ext_resource type="Texture2D" uid="uid://bcddwwj3gs74j" path="res://icon.svg" id="2_bh3qi"]
+[ext_resource type="PackedScene" uid="uid://6q2jgpy6xauq" path="res://Scenes/Player/player.tscn" id="3_otl0v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8lsky"]
 size = Vector2(129, 113)
@@ -16,19 +17,25 @@ position = Vector2(-228, -213)
 texture = ExtResource("2_bh3qi")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(170, -68)
 shape = SubResource("RectangleShape2D_8lsky")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(-274, -75)
+position = Vector2(-730, -79)
 shape = SubResource("RectangleShape2D_8lsky")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(10, 53)
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(-70, 112)
@@ -38,5 +45,8 @@ shape = SubResource("WorldBoundaryShape2D_bh3qi")
 modulate = Color(0.912106, 0.0856072, 1.92523e-07, 1)
 position = Vector2(13, -73)
 
-[node name="Camera2D" type="Camera2D" parent="Enemy1Test"]
+[node name="Player" parent="." instance=ExtResource("3_otl0v")]
+position = Vector2(185, -283)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)

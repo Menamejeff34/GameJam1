@@ -18,10 +18,12 @@ shape = SubResource("CapsuleShape2D_51jp5")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 target_position = Vector2(103, 0)
+collision_mask = 2
 
 [node name="RayCastPlayer" type="RayCast2D" parent="."]
-target_position = Vector2(350, -1)
+target_position = Vector2(689, 0)
 collision_mask = 128
 
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-102, 0)
+collision_mask = 2

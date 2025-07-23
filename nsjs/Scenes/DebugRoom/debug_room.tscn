@@ -1,27 +1,33 @@
 [gd_scene load_steps=6 format=3 uid="uid://cb2m5ea70g1sg"]
 
 [ext_resource type="PackedScene" uid="uid://b5fouvn82sc3f" path="res://Scenes/Enemies/enemy_1_test.tscn" id="1_8lsky"]
-[ext_resource type="Texture2D" uid="uid://bcddwwj3gs74j" path="res://icon.svg" id="2_bh3qi"]
+[ext_resource type="Texture2D" uid="uid://cwqwqpjig2o1w" path="res://Scenes/DebugRoom/debugRoomSprite.png" id="1_otl0v"]
 [ext_resource type="PackedScene" uid="uid://6q2jgpy6xauq" path="res://Scenes/Player/player.tscn" id="3_otl0v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8lsky"]
 size = Vector2(129, 113)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bh3qi"]
-distance = 127.0
+distance = 211.0
 
 [node name="DebugRoom" type="Node2D"]
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(-228, -213)
-texture = ExtResource("2_bh3qi")
+[node name="DebugRoomSprite" type="Sprite2D" parent="."]
+modulate = Color(0.217701, 0.217701, 0.217701, 1)
+position = Vector2(-284, -256)
+texture = ExtResource("1_otl0v")
+
+[node name="DebugRoomSprite2" type="Sprite2D" parent="."]
+modulate = Color(0.224905, 0.224905, 0.224905, 1)
+position = Vector2(511, -256)
+texture = ExtResource("1_otl0v")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(170, -68)
+position = Vector2(618, -76)
 shape = SubResource("RectangleShape2D_8lsky")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
@@ -43,10 +49,10 @@ shape = SubResource("WorldBoundaryShape2D_bh3qi")
 
 [node name="Enemy1Test" parent="." instance=ExtResource("1_8lsky")]
 modulate = Color(0.912106, 0.0856072, 1.92523e-07, 1)
-position = Vector2(13, -73)
+position = Vector2(-159, -139)
 
 [node name="Player" parent="." instance=ExtResource("3_otl0v")]
-position = Vector2(185, -283)
+position = Vector2(608, -245)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)

@@ -102,7 +102,7 @@ layout_mode = 2
 offset_left = 541.0
 offset_top = 214.0
 offset_right = 613.0
-offset_bottom = 438.0
+offset_bottom = 464.0
 alignment = 1
 
 [node name="Start Button" type="Button" parent="Control/VBoxContainer"]
@@ -146,4 +146,5 @@ position = Vector2(590, 359)
 scale = Vector2(11.1719, 6.29688)
 texture = ExtResource("1_f6ya5")
 
+[connection signal="pressed" from="Control/VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]

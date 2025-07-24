@@ -37,3 +37,10 @@ func _on_quit_button_pressed() -> void:
 	var timer = get_tree().create_timer(1)
 	await timer.timeout
 	get_tree().quit()
+
+
+func _on_start_button_pressed() -> void:
+	animation_player.play("Fade In")
+	var timer = get_tree().create_timer(1)
+	await timer.timeout
+	get_tree().change_scene_to_file("res://Scenes/DebugRoom/debug_room.tscn")

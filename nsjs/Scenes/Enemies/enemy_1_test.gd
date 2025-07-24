@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
-@onready var ray_cast_player: RayCast2D = $RayCastPlayer
+@onready var ray_cast_player_front: RayCast2D = $RayCastPlayerFront
+@onready var ray_cast_player_back: RayCast2D = $RayCastPlayerBack
 
 const SPEED := 300.0
 var direction := 1
@@ -25,12 +26,13 @@ func _physics_process(delta: float) -> void:
 func patrol():
 	if ray_cast_right.is_colliding():
 		direction = -1
-		ray_cast_player.rotate(rad_to_deg(180))
+		ray_cast_player_front.rotate(rad_to_deg(180))
+		ray_cast_player_back.rotate(rad_to_deg(180))
 	elif ray_cast_left.is_colliding():
 		direction = 1
-		ray_cast_player.rotate(rad_to_deg(180))
-	
-	if ray_cast_player.is_colliding():
+		ray_cast_player_front.rotate(rad_to_deg(180))
+		ray_cast_player_back.rotate(rad_to_deg(180))
+	if ray_cast_player_front.is_colliding() or ray_cast_player_back.is_colliding():
 		player_found = true
 		
 		

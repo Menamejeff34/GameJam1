@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cb2m5ea70g1sg"]
+[gd_scene load_steps=7 format=3 uid="uid://cb2m5ea70g1sg"]
 
 [ext_resource type="PackedScene" uid="uid://b5fouvn82sc3f" path="res://Scenes/Enemies/enemy_1_test.tscn" id="1_8lsky"]
 [ext_resource type="Texture2D" uid="uid://cwqwqpjig2o1w" path="res://Scenes/DebugRoom/debugRoomSprite.png" id="1_otl0v"]
 [ext_resource type="PackedScene" uid="uid://6q2jgpy6xauq" path="res://Scenes/Player/player.tscn" id="3_otl0v"]
+[ext_resource type="PackedScene" uid="uid://h0qqv86w856c" path="res://Scenes/Items/FlashLight/flashlight.tscn" id="4_ct5aw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8lsky"]
 size = Vector2(129, 113)
@@ -13,12 +14,12 @@ distance = 211.0
 [node name="DebugRoom" type="Node2D"]
 
 [node name="DebugRoomSprite" type="Sprite2D" parent="."]
-modulate = Color(0.217701, 0.217701, 0.217701, 1)
+modulate = Color(0.0768359, 0.0768358, 0.0768357, 1)
 position = Vector2(-284, -256)
 texture = ExtResource("1_otl0v")
 
 [node name="DebugRoomSprite2" type="Sprite2D" parent="."]
-modulate = Color(0.224905, 0.224905, 0.224905, 1)
+modulate = Color(0.078815, 0.078815, 0.078815, 1)
 position = Vector2(511, -256)
 texture = ExtResource("1_otl0v")
 
@@ -56,3 +57,6 @@ position = Vector2(608, -245)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
+
+[node name="flashlight" parent="." instance=ExtResource("4_ct5aw")]
+position = Vector2(1109, -81)

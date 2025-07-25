@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://h0qqv86w856c"]
+
+[ext_resource type="Script" uid="uid://dj2qby0iicrqd" path="res://Scenes/Items/FlashLight/flashlight.gd" id="1_b31kw"]
+[ext_resource type="Texture2D" uid="uid://bcddwwj3gs74j" path="res://icon.svg" id="2_unjb7"]
+[ext_resource type="AudioStream" uid="uid://d5rpq2oth605" path="res://Scenes/Items/FlashLight/flashlightpickup.mp3" id="3_ig86o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tt5pm"]
+radius = 61.0737
+
+[node name="flashlight" type="Area2D"]
+collision_layer = 128
+collision_mask = 128
+script = ExtResource("1_b31kw")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(2, -2)
+scale = Vector2(0.855469, 0.767578)
+texture = ExtResource("2_unjb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tt5pm")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ig86o")
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

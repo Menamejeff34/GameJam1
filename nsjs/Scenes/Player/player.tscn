@@ -33,6 +33,7 @@ autoplay = "right"
 shape = SubResource("CapsuleShape2D_a3d8c")
 
 [node name="FlashSprite" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(63, 3.8147e-06)
 scale = Vector2(0.25, 0.1875)
 texture = ExtResource("1_uvnfx")
@@ -40,7 +41,7 @@ texture = ExtResource("1_uvnfx")
 [node name="flashlight" type="PointLight2D" parent="FlashSprite"]
 position = Vector2(340, -2.03451e-05)
 rotation = 1.5708
-energy = 3.0
+energy = 7.0
 shadow_enabled = true
 texture = ExtResource("3_xpcdj")
 offset = Vector2(0, -135)

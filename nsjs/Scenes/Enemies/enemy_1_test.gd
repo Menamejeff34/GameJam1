@@ -47,6 +47,5 @@ func chase():
 		
 	velocity.x = direction * SPEED * 1.1
 	
-	#the plan for this function is to uses an autoload to find the players position
-	#and have the enemy run at them
+	#the plan is to have a bool variable check to know if the player is hiding
 	

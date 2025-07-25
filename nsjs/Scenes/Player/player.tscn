@@ -41,7 +41,6 @@ texture = ExtResource("1_uvnfx")
 [node name="flashlight" type="PointLight2D" parent="FlashSprite"]
 position = Vector2(340, -2.03451e-05)
 rotation = 1.5708
-energy = 7.0
 shadow_enabled = true
 texture = ExtResource("3_xpcdj")
 offset = Vector2(0, -135)

@@ -14,12 +14,10 @@ distance = 211.0
 [node name="DebugRoom" type="Node2D"]
 
 [node name="DebugRoomSprite" type="Sprite2D" parent="."]
-modulate = Color(0.0768359, 0.0768358, 0.0768357, 1)
 position = Vector2(-284, -256)
 texture = ExtResource("1_otl0v")
 
 [node name="DebugRoomSprite2" type="Sprite2D" parent="."]
-modulate = Color(0.078815, 0.078815, 0.078815, 1)
 position = Vector2(511, -256)
 texture = ExtResource("1_otl0v")
 
@@ -60,3 +58,8 @@ zoom = Vector2(2, 2)
 
 [node name="flashlight" parent="." instance=ExtResource("4_ct5aw")]
 position = Vector2(1109, -81)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+color = Color(0.136826, 0.136826, 0.136826, 1)
+blend_mode = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://p6f2eywb7fxq"]
+[gd_scene load_steps=15 format=3 uid="uid://p6f2eywb7fxq"]
 
 [ext_resource type="Script" uid="uid://ddhntuss4tfcr" path="res://Scenes/TitleScreen/title_screen.gd" id="1_4lqrc"]
 [ext_resource type="Texture2D" uid="uid://bcddwwj3gs74j" path="res://icon.svg" id="1_f6ya5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://caswuoyeca58p" path="res://Scenes/TitleScreen/cloud3.png" id="6_wgw8k"]
 [ext_resource type="Texture2D" uid="uid://bilrhrugbfxat" path="res://Scenes/TitleScreen/OptionButton1.png" id="7_44kja"]
 [ext_resource type="Texture2D" uid="uid://di4i35nfvbnkk" path="res://Scenes/TitleScreen/QuitButton1.png" id="8_tgnp7"]
+[ext_resource type="AudioStream" uid="uid://ctin51kmtbvjh" path="res://Scenes/TitleScreen/titlescreen_music.wav" id="10_tgnp7"]
 
 [sub_resource type="Animation" id="Animation_4lqrc"]
 resource_name = "Fade In"
@@ -145,6 +146,11 @@ modulate = Color(0, 0, 0, 1)
 position = Vector2(590, 359)
 scale = Vector2(11.1719, 6.29688)
 texture = ExtResource("1_f6ya5")
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(576, 330)
+stream = ExtResource("10_tgnp7")
+autoplay = true
 
 [connection signal="pressed" from="Control/VBoxContainer/Start Button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Quit Button" to="." method="_on_quit_button_pressed"]
